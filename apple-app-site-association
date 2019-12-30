@@ -1,0 +1,15 @@
+{
+"applinks": {
+    "apps": [ ],
+    "details": [
+        {
+            "appID": "47PAWXB6W8.47PAWXB6W8.com.visa.collabsg.highjumpqc",
+            "paths": [ "/profile/activate" ]
+        },
+        {
+            "appID": "KX5LQ9ETQR.com.visa.highjumpqc",
+            "paths": [ "*" ]
+        }
+    ]
+}
+}
