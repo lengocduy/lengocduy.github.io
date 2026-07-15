@@ -1,19 +1,781 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome to DuyLeNgoc's Github Page</title>
-</head>
-<body>
-<h1>
-   <q>Make everything simple if we can</q>
-</h1>
-<h2> My name is "Duy Le Ngoc"</h2>
-<ul>
-    <li>Start programming with j2me, C++ after I got a BSc in Computer & Information University of Science, VNU-HCM. Continuously, I program with Object-C, Swift, Java, Kotlin, JavaScript, TypeScript, Groovy, Bash, Python, Dart</li>
-    <li>Participate in different kinds of projects, various state-of-the-art technology, and an essential contributor in providing realistic and reasonable technical solutions with over 13 years of experience working in the software industry</li>
-    <li>Experience in Agile Development Process, OOP, FP, Software Architecture Design, Design Patterns, Software Construction, Deployment, and Configuration. I focus on ensuring a high standard in usability, functionality, and overall code quality</li>
-    <li>Apply best practices for my team with hands-on support, update with trending technologies and keep me informed, anticipating "the next big thing" coming as my hobby is technical</li>
-    <li>Read books and lesson learns to gain more knowledge, more experienced, and more ideas</li>
-</ul>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duy Le Ngoc | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Duy Le Ngoc - Technology Consultant, Engineering Manager, Technical Manager, and AWS Certified Professional."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-color: #0f172a;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --accent: #38bdf8;
+        --card-bg: rgba(30, 41, 59, 0.7);
+        --card-border: rgba(255, 255, 255, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+        background-image:
+          radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+          radial-gradient(
+            at 50% 0%,
+            hsla(225, 39%, 30%, 0.2) 0,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 0%,
+            hsla(339, 49%, 30%, 0.2) 0,
+            transparent 50%
+          );
+        background-attachment: fixed;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 4rem;
+        animation: fadeInDown 1s ease-out;
+      }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+        border: 3px solid var(--accent);
+        box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .profile-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 35px rgba(56, 189, 248, 0.5);
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(to right, #38bdf8, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .subtitle {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      .contact-info {
+        font-size: 1rem;
+        color: var(--text-muted);
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .contact-info a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+
+      .contact-info a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+
+      .section {
+        margin-bottom: 4rem;
+        animation: fadeInUp 1s ease-out backwards;
+      }
+
+      .section:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .section:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .section:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .section:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .section:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 3px;
+        width: 50%;
+        background: var(--accent);
+        border-radius: 2px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        margin-bottom: 1.5rem;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        border-color: rgba(56, 189, 248, 0.3);
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .skill-tag {
+        background: rgba(56, 189, 248, 0.1);
+        color: var(--accent);
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        transition: background 0.3s ease;
+      }
+
+      .skill-tag:hover {
+        background: rgba(56, 189, 248, 0.2);
+      }
+
+      .about-text {
+        color: #cbd5e1;
+        font-size: 1.05rem;
+      }
+
+      .about-text p {
+        margin-bottom: 1rem;
+      }
+
+      /* Experience specific styles */
+      .job-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #f1f5f9;
+      }
+
+      .job-meta {
+        color: var(--accent);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+
+      .job-desc {
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        margin-left: 1.2rem;
+      }
+      .job-desc li {
+        margin-bottom: 0.5rem;
+      }
+
+      .list-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        color: #cbd5e1;
+        margin-bottom: 0.75rem;
+      }
+
+      .list-item::before {
+        content: "✔";
+        color: var(--accent);
+        font-weight: bold;
+      }
+
+      .btn {
+        display: inline-block;
+        background: linear-gradient(to right, #38bdf8, #2563eb);
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition:
+          opacity 0.3s,
+          transform 0.3s;
+        margin-top: 2rem;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        .container {
+          padding: 2rem 1.5rem;
+        }
+        .card {
+          padding: 1.5rem;
+        }
+        .contact-info {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="https://media.licdn.com/dms/image/v2/C5603AQE7n3ioWs8dmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1621619818666?e=1785974400&v=beta&t=8a6dX9H6XAknUWrMrlNpAjhqm6vH0Miv9HPpFpUWsFA" alt="Duy Le Ngoc" class="profile-img" />
+        <h1>
+          Duy Le Ngoc
+          <span
+            style="
+              font-size: 1.5rem;
+              color: var(--text-muted);
+              font-weight: 400;
+            "
+            >(askbills)</span
+          >
+        </h1>
+        <p class="subtitle">
+          Technology Consultant | Engineering Manager | Technical Manager | AWS
+          Certified
+        </p>
+        <div class="contact-info">
+          <span>📍 Ho Chi Minh City, Vietnam</span>
+          <a
+            href="mailto:askbills@gmail.com?subject=Interested%20in%20collaboration"
+            >✉️ Contact Me</a
+          >
+          <a href="https://linkedin.com/in/duy-le-ngoc" target="_blank"
+            >🔗 linkedin.com/in/duy-le-ngoc</a
+          >
+        </div>
+      </header>
+
+      <section class="section">
+        <h2>Professional Summary</h2>
+        <div class="card about-text">
+          <p>
+            Experienced Technology Leader, Technical Architect, and Engineering
+            Manager with 17+ years in software development. Passionate about
+            leveraging technology to solve business challenges through scalable
+            architectures, cloud solutions, and blockchain innovation.
+          </p>
+          <p>
+            Strong expertise in Agile methodologies, CI/CD, cloud security, and
+            software engineering best practices. Proven track record of leading
+            high-performance core teams of 12–20 members, with the proven
+            ability to seamlessly scale and manage cross-functional teams of up
+            to 30 members during critical project expansions.
+          </p>
+          <p style="color: var(--accent); margin-top: 1rem; font-weight: 500">
+            🌍 Open to global relocation to support impactful projects, with
+            particular interest in Canada, Australia, and New Zealand.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Core Skills</h2>
+        <div class="card">
+          <div class="list-item"><span><strong style="color: #f1f5f9; margin-right: 0.5rem;">Engineering Leadership & Agile Management:</strong> Scaling cross-functional teams, Solution Consulting, Scrum (DoR, DoD).</span></div>
+          <div class="list-item"><span><strong style="color: #f1f5f9; margin-right: 0.5rem;">Software & Cloud Architecture:</strong> Designing highly scalable Microservices, Serverless systems, and AWS/GCP Cloud infrastructures.</span></div>
+          <div class="list-item"><span><strong style="color: #f1f5f9; margin-right: 0.5rem;">AI & LLM Development:</strong> Agentic Coding SDLC, LLM Integration, and Runtime deployments.</span></div>
+          <div class="list-item"><span><strong style="color: #f1f5f9; margin-right: 0.5rem;">Quality Assurance & DevSecOps:</strong> Automated/Performance Testing, CI/CD Pipelines, and Penetration Testing.</span></div>
+          <div class="list-item"><span><strong style="color: #f1f5f9; margin-right: 0.5rem;">Blockchain & Web3 Innovation:</strong> Ethereum L2 scaling and Smart Contract architecture.</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Selected AI & Engineering Projects</h2>
+
+        <div class="card" style="margin-bottom: 1.5rem">
+          <div class="job-title">Job Hunting AI Agent</div>
+          <div class="job-meta">
+            Private Project | Role: AI Solutions Architect & Fullstack Engineer
+          </div>
+          <ul class="job-desc" style="margin-top: 0.5rem">
+            <li>
+              Architected and built an end-to-end autonomous AI agent leveraging
+              LLMs to streamline the recruitment process.
+            </li>
+            <li>
+              Pioneered a new "AI-era SDLC" paradigm: acted as the
+              human-in-the-loop controlling technical specs, architecture
+              design, evaluation, and monitoring, while delegating the
+              implementation ("the how") to the AI agent.
+            </li>
+            <li>
+              Implemented features to parse job descriptions, execute
+              candidate-to-job criteria matching with scoring algorithms, and
+              auto-generate tailored cover letters.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem">
+          <div class="job-title">Ambient AI Agent & Runtime Deployment</div>
+          <div class="job-meta">
+            Public Repository (GitHub) | Role: AI-Native Fullstack Engineer
+          </div>
+          <ul class="job-desc" style="margin-top: 0.5rem">
+            <li>
+              Managed end-to-end full-stack development of an ambient AI agent,
+              applying best practices from Google Kaggle codelabs.
+            </li>
+            <li>
+              Prototyped, built, and successfully deployed the agent to a modern
+              Agent Runtime environment.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem">
+          <div class="job-title">Cloud-Agnostic IaC Foundation</div>
+          <div class="job-meta">
+            Private Project | Role: Principal Platform Engineer (DevX)
+          </div>
+          <ul class="job-desc" style="margin-top: 0.5rem">
+            <li>
+              Designed and built a comprehensive Infrastructure as Code (IaC)
+              foundation using Terraform, adopting a Platform-as-a-Product
+              mindset.
+            </li>
+            <li>
+              Automated secure, cloud-agnostic provisioning pipelines to
+              drastically reduce cognitive load for developers, maximizing
+              engineering velocity and safe enterprise deployments.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Highlighted Projects</h2>
+
+        <div class="card" style="margin-bottom: 1.5rem">
+          <div class="job-title">
+            AdvaPACS — AdvaHealth’s Cloud Imaging Platform
+          </div>
+          <div class="job-meta">Role: Tech Lead | Team Size: 8 members</div>
+          <p style="color: #cbd5e1; font-size: 1.05rem">
+            A highly scalable cloud imaging platform designed to modernize
+            healthcare organizations without the cost and complexity of legacy
+            infrastructure.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem">
+          <div class="job-title">Ethereum L2 Scaling Solutions</div>
+          <div class="job-meta">
+            Myria | Role: Technical Manager | Team Size: 20 members
+          </div>
+          <p style="color: #cbd5e1; font-size: 1.05rem">
+            High-security, low-fee Web3 infrastructure supporting complex B2B
+            and B2C product ecosystems.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem">
+          <div class="job-title">
+            Highland Coffee — Customer Engagement Mobile Platform
+          </div>
+          <div class="job-meta">
+            Role: Technical Architect | Team Size: 24 members
+          </div>
+          <p style="color: #cbd5e1; font-size: 1.05rem">
+            A highly scalable consumer application designed to build engagement
+            with millions of guests annually.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem">
+          <div class="job-title">
+            Visa Go Tokyo — Digital Issuance & Card Management
+          </div>
+          <div class="job-meta">
+            Role: Technical Architect | Team Size: 25-30 members
+          </div>
+          <p style="color: #cbd5e1; font-size: 1.05rem">
+            A high-security digital payment and card management platform built
+            exclusively for C-Level banking executives.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="job-title">
+            Jenius — Personalized Life Finance Management
+          </div>
+          <div class="job-meta">
+            Role: Principal Full-stack Developer | Team Size: 150 members
+          </div>
+          <p style="color: #cbd5e1; font-size: 1.05rem">
+            A highly scalable financial application providing personalized life
+            finance management and core lending solutions.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Work Experience</h2>
+
+        <div class="card">
+          <div class="job-title">Tech Lead</div>
+          <div class="job-meta">AdvaHealth Solutions | 08/2025 - 05/2026</div>
+          <ul class="job-desc">
+            <li>
+              Standardized release pipelines to ensure complete business
+              alignment, superior code quality, and secure enterprise
+              deployments.
+            </li>
+            <li>
+              Led code reviews, architectural guidelines, and maintaining
+              technical standards across the team.
+            </li>
+            <li>
+              Provided technical leadership by mentoring developers, guiding
+              implementation decisions, and resolving technical blockers.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="job-title">Blockchain Lead | Technical Manager</div>
+          <div class="job-meta">Myria | 03/2022 – 04/2025</div>
+          <ul class="job-desc">
+            <li>
+              Led team to design and implement Ethereum L2 scaling solutions
+              with high security and low transaction fees.
+            </li>
+            <li>
+              Architected and developed core components, smart contracts, wallet
+              integration, Web3 functionalities and real-time Leaderboard.
+            </li>
+            <li>
+              Automated deployment with GitLab CI/CD and Terraform, optimizing
+              DevOps workflows.
+            </li>
+            <li>
+              Established Agile development standards (DoR, DoD, JIRA workflows)
+              to enhance team efficiency.
+            </li>
+            <li>
+              Led system monitoring, incident resolution, and cost optimization
+              initiatives, reducing expenses by 20%.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="job-title">Technical Architect | Engineering Manager</div>
+          <div class="job-meta">CBTW APAC | 02/2015 – 02/2022</div>
+          <ul class="job-desc">
+            <li>
+              Analyzed business needs by collaborating with stakeholders
+              (Client, PM, QA, IT, etc.) and translated them into scalable
+              technology solutions.
+            </li>
+            <li>
+              Led teams to design, develop, and deploy enterprise-level
+              applications.
+            </li>
+            <li>
+              Worked closely with PMs, designers, and engineers to ensure
+              seamless project execution.
+            </li>
+            <li>
+              Researched and implemented emerging technologies (SwiftUI, Kotlin,
+              Flutter, TDD).
+            </li>
+            <li>
+              Conducted technical mentorship, knowledge sharing, and hiring for
+              key roles.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="job-title">Software Engineering Team Lead</div>
+          <div class="job-meta">VNG Corporation | 11/2012 – 02/2015</div>
+          <ul class="job-desc">
+            <li>
+              Led engineering teams in requirement analysis, architecture
+              design, and implementation.
+            </li>
+            <li>
+              Took Mobile Team Lead at VNG build product to help users serve
+              seats, book tickets only vi 123Phim.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="job-title">Senior Java Programmer</div>
+          <div class="job-meta">Joombi Games | 08/2011 – 11/2012</div>
+          <ul class="job-desc">
+            <li>
+              Built scalable and efficient Java-based backend solutions for
+              gaming applications.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="job-title">Programmer</div>
+          <div class="job-meta">Vivoo | 02/2011 – 08/2011</div>
+          <ul class="job-desc">
+            <li>
+              Developed software solutions and optimized application
+              performance.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="job-title">Junior Programmer</div>
+          <div class="job-meta">Gameloft | 02/2009 – 02/2011</div>
+          <ul class="job-desc">
+            <li>Developed and maintained mobile gaming applications.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Tools & Technologies</h2>
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: #e2e8f0; font-size: 1.1rem">
+            Databases
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">PostgreSQL</span
+            ><span class="skill-tag">DynamoDB</span
+            ><span class="skill-tag">MongoDB</span
+            ><span class="skill-tag">DocumentDB</span
+            ><span class="skill-tag">AWS RDS</span>
+          </div>
+
+          <h3
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 1rem;
+              color: #e2e8f0;
+              font-size: 1.1rem;
+            "
+          >
+            Programming Languages
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Bash</span
+            ><span class="skill-tag">Solidity</span
+            ><span class="skill-tag">JavaScript</span
+            ><span class="skill-tag">TypeScript</span
+            ><span class="skill-tag">Node.js</span
+            ><span class="skill-tag">React</span
+            ><span class="skill-tag">React Native</span
+            ><span class="skill-tag">Kotlin</span
+            ><span class="skill-tag">Swift</span
+            ><span class="skill-tag">Flutter</span
+            ><span class="skill-tag">Java</span>
+          </div>
+
+          <h3
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 1rem;
+              color: #e2e8f0;
+              font-size: 1.1rem;
+            "
+          >
+            Cloud & DevOps
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">AWS</span
+            ><span class="skill-tag">GCP</span
+            ><span class="skill-tag">Terraform</span
+            ><span class="skill-tag">Kubernetes</span
+            ><span class="skill-tag">Docker</span
+            ><span class="skill-tag">GitLab CI/CD</span
+            ><span class="skill-tag">Github Actions</span
+            ><span class="skill-tag">Firebase</span
+            ><span class="skill-tag">App Store Connect</span
+            ><span class="skill-tag">Google Play</span>
+          </div>
+
+          <h3
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 1rem;
+              color: #e2e8f0;
+              font-size: 1.1rem;
+            "
+          >
+            Blockchain & Web3
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Ethereum L2</span
+            ><span class="skill-tag">Solidity</span
+            ><span class="skill-tag">Smart Contracts</span
+            ><span class="skill-tag">Wallet Integration</span
+            ><span class="skill-tag">Ether.js</span
+            ><span class="skill-tag">Hardhat</span>
+          </div>
+
+          <h3
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 1rem;
+              color: #e2e8f0;
+              font-size: 1.1rem;
+            "
+          >
+            Project Management
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Agile</span
+            ><span class="skill-tag">Scrum</span
+            ><span class="skill-tag">JIRA</span
+            ><span class="skill-tag">Confluence</span>
+          </div>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: #e2e8f0; font-size: 1.1rem;">
+            Testing & Quality Assurance
+          </h3>
+          <div class="skills-grid">
+            <span class="skill-tag">Automated Testing</span
+            ><span class="skill-tag">Performance Testing</span
+            ><span class="skill-tag">Penetration Testing</span
+            ><span class="skill-tag">Serenity</span
+            ><span class="skill-tag">JMeter</span
+            ><span class="skill-tag">k6</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Education & Certifications</h2>
+        <div class="card">
+          <h3 style="margin-bottom: 1rem; color: #e2e8f0; font-size: 1.15rem">
+            Education
+          </h3>
+          <div class="list-item" style="color: #cbd5e1; margin-bottom: 1.5rem">
+            Bachelor’s Degree in Information Technology | Vietnam National
+            University, Ho Chi Minh City | 2004 – 2009
+          </div>
+
+          <h3 style="margin-bottom: 1rem; color: #e2e8f0; font-size: 1.15rem">
+            Certifications
+          </h3>
+          <div class="list-item">AWS Certified Security – Specialty (AWS)</div>
+          <div class="list-item">
+            AWS Certified Solutions Architect – Professional (AWS)
+          </div>
+          <div class="list-item">
+            AWS Certified Solutions Architect – Associate (AWS)
+          </div>
+          <div class="list-item">Agile Project Management (Coursera)</div>
+        </div>
+      </section>
+
+        <section class="section" style="text-align: center; margin-top: 6rem;">
+            <h2>Let's Build Something Amazing Together</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1rem">
+          Interested in reaching out for collaboration or requesting my full
+          resume?
+        </p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+          "
+        >
+          <a
+            href="mailto:askbills@gmail.com?subject=Interested%20in%20collaboration%20-%20Resume%20Request"
+            class="btn"
+            >✉️ Contact Me</a
+          >
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
